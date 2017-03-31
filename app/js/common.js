@@ -9,17 +9,19 @@ $(function () {
     $(".item-text").equalHeights();
 
     //Magnific Popup
-    var slide = $('.slide');
-    slide.each(function (e) {
-        var th = $(this);
-        th.attr('href', '#slide-' + e)
-            .find('.slide-popup')
-            .attr('id', 'slide-' + e);
-    });
-    slide.magnificPopup({
-        mainClass: 'my-mfp-zoom-in',
-        removalDelay: 300,
-        type: 'inline'
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Загрузка изображения #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">Изображение #%curr%</a> не может быть загружено.'
+        }
     });
 
     var callBack = $('a[href="#callback"]');

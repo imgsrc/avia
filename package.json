@@ -17,7 +17,7 @@
     "gulp-group-css-media-queries": "*",
     "gulp-imagemin": "*",
     "gulp-notify": "*",
-    "gulp-postcss": "*,
+    "gulp-postcss": "*",
     "gulp-rename": "*",
     "gulp-sass": "*",
     "gulp-sass-unicode": "*",
