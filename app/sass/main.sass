@@ -7,18 +7,22 @@ $output-bourbon-deprecation-warnings: false !default
 .main-head
   color: $white
   position: relative
-  min-height: 90vh
+  min-height: 80vh
   background: $color url("../img/bg.jpg") no-repeat center top
   background-size: cover
   .top-line
     padding: 20px 0
-    h3
-      margin-top: 0
+    .top-title
+      h3
+        text-transform: none
+        font-size: em(38px)
+        margin-top: 20px
     .top-phone
       text-align: right
       p
         margin-top: 0
-        font-family: "Exo2Bold", serif
+        font-family: "Exo 2", serif
+        font-weight: bold
         font-size: 20px
       .button
         padding: 7px 20px
@@ -26,24 +30,48 @@ $output-bourbon-deprecation-warnings: false !default
     padding-top: 10%
     h1
       margin-bottom: 50px
+    p
+      line-height: 1.6
+      strong
+        font-size: em(18px)
+
+
+.parallax-bg
+  background: url("../img/bg2.jpg") no-repeat bottom center
+  background-size: cover
 
 .s-about
+  background-color: rgba($white, .7)
+  .about-wrap
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-around
+    +media-xs(down)
+      flex-direction: column
+      align-items: center
   &-item
+    max-width: 200px
     img
       width: 150px
       margin-bottom: 20px
+    h3
+      text-transform: none
 
 .s-features
   color: $white
   img
     width: 150px
     margin-bottom: 20px
+  h4
+    line-height: 1.6
 
 .s-works
+  background-color: rgba($white, .7)
   .col-sm-3
     padding: 0 5px
   .works-item
     margin-bottom: 10px
+    box-shadow: 0 5px 10px rgba($color, .5)
 
 
 .s-contacts
@@ -86,7 +114,6 @@ $output-bourbon-deprecation-warnings: false !default
     margin: 20px 0 20px
     text-transform: none
   p
-    font-size: em(15px)
     margin-bottom: 15px
   .fa
     margin-right: 0

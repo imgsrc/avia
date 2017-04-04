@@ -1,9 +1,6 @@
 $(function () {
 
-    //parallax
-    $(".s-features").parallax({
-        imageSrc: './img/bg2.jpg'
-    });
+
 
     //EqualHeight
     $(".item-text").equalHeights();

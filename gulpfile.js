@@ -72,7 +72,7 @@ gulp.task('postcss', function () {
 gulp.task('watch', ['postcss', 'scripts', 'browser-sync'], function () {
     gulp.watch('app/sass/**/*.sass', ['postcss']);
     gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['scripts']);
-    gulp.watch('app/*.html', browserSync.reload({stream: true}));
+    gulp.watch('app/*.html', browserSync.reload);
 });
 
 
